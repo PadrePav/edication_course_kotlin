@@ -11,7 +11,7 @@ fun main() {
     while (archersList.size != 1) {                                     // Check if there are more than one archer in our list
         if (archersList[archersList.size - 1] == 0) {
             archersList.removeAll { it == 0 }
-            for (i in 0 until archersList.size) {
+            for (i in archersList.indices) {
                 if (i < archersList.size - 1) {
                     if (i % 2 == 0) {
                         if (archersList.size - 1 != i) archersList[i + 1] = 0
@@ -21,7 +21,7 @@ fun main() {
         }
         else {
             archersList.removeAll { it == 0 }
-            for (i in 0 until archersList.size) {
+            for (i in archersList.indices) {
                 if (i % 2 != 0) {
                     archersList[i - 1] = 0
                 }
